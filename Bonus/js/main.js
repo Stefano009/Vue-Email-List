@@ -15,7 +15,7 @@ const app = new Vue({
                     .then(function(obj) {
                         console.log(obj.data);
                         //il mio console.log mi da ogni volta una mail diversa, quindi abbiamo un generatore di mail
-                        app.emailGenerated.push(obj.data.response);
+                        app.emailGenerated.push({ response: obj.data.response, flag: false });
                         console.log(app.emailGenerated)
                     })
             }

@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 60vw;
+    margin: 0 auto;
+    background-color: lightgray;
+}
+
+#root {
+    background-color: lightsalmon;
+    height: 100vh;
+    text-align: center;
+    padding: 5rem 0;
+}
+
+#root>h1 {
+    padding: 1rem;
+    color: blueviolet;
+    cursor: pointer;
+}
+
+.email-chosen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    padding-bottom: 2rem;
+}

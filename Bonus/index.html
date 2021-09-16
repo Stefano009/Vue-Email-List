@@ -12,9 +12,15 @@
 
 <body>
     <div id="root">
-        <h1 v-show="emailGenerated.length == 10" v-for="email in emailGenerated">
-            {{email}}
+        <h1 @click="emailGenerated[index].flag = !emailGenerated[index].flag" v-show="emailGenerated.length == 10" v-for="(email, index) in emailGenerated">
+            {{index+1}}-{{email.response}}
+            <div v-show="emailGenerated[index].flag == true" class="email-chosen">
+                <p>
+                    l'email selezionata è {{emailGenerated[index].response}}
+                </p>
+            </div>
         </h1>
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="js/main.js"></script>
